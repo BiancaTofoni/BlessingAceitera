@@ -1,0 +1,409 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Encabezado */
+  header {
+    display: flex;
+    justify-content: flex-start; /* Alinea todo a la izquierda */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #FFD700; /* Fondo amarillo */
+    padding: 0 20px; /* Espaciado interno para los bordes */
+    height: 80px; /* Altura fija del header */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye el padding dentro del ancho */
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px; /* Espaciado entre los enlaces */
+  }
+  
+  nav a {
+    text-decoration: none; /* Sin subrayado */
+    color: black; /* Texto negro */
+    font-weight: bold; /* Negrita */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: #ffe868; /* Fondo amarillo */
+    padding: 0 20px; /* Ajusta el espacio horizontal */
+    height: 80px; /* Ajusta la altura del header */
+    text-align: left;
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px; /* Espacio entre las opciones del menú */
+  }
+  
+  nav a {
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Texto negro */
+    font-weight: bold; /* Hace el texto más grueso */
+    line-height: 80px; /* Centra verticalmente si el alto es fijo */
+  }
+  
+  nav a:hover {
+    color: #FFA500; /* Cambia de color al pasar el cursor */
+  }
+  
+  
+  nav {
+    display: flex;
+    gap: 20px; /* Espacio entre las opciones del menú */
+  }
+  
+  nav a {
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Texto negro */
+    font-weight: bold; /* Hace el texto más grueso */
+    line-height: 80px; /* Centra verticalmente si el alto es fijo */
+  }
+  
+  nav a:hover {
+    color: #FFA500; /* Cambia de color al pasar el cursor */
+  }
+  
+  /* Logo */
+  .logo img {
+    max-height: 60px; /* Tamaño del logo */
+    margin-top: 0;
+    }
+  
+  /* Lista de navegación */
+  .nav-list {
+    list-style: none; /* Quita los puntos de lista */
+    display: flex; /* Muestra los elementos en línea */
+    gap: 20px; /* Espaciado entre los enlaces */
+    margin: auto; 
+    padding: 0;
+  }
+  
+  /* Enlaces de navegación */
+  .nav-list a {
+    text-decoration: none; /* Sin subrayado */
+    color: rgb(0, 0, 0); /* Color blanco */
+    font-weight: bolder; /* Texto más grueso */
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: color 0.3s ease; /* Transición al pasar el mouse */
+  }
+  
+  .nav-list a:hover {
+    color: #f5c518; /* Color amarillo en hover */
+  }
+/* Estilo del header */
+.header-aceite {
+    position: relative;
+    height: 50px;
+    text-align: center;
+    overflow: hidden; /* Necesario para las gotas */
+    z-index: 0; /* Asegúrate de que el header esté detrás de otros elementos si es necesario */
+  }
+
+  /* Estilo del logo*/
+  .logo{
+    padding-top: 5px;
+  }
+  
+  /* Contenedor del header (logo y navegación) */
+  .header-container {
+    position: relative; /* Necesario para que los elementos estén por encima de las gotas */
+    z-index: 2; /* Asegura que la navegación y el logo estén encima de las gotas */
+  }
+  
+  /* Contenedor de las gotas */
+  .gotas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Las gotas estarán detrás del contenido interactivo */
+    overflow: hidden;
+    pointer-events: none; /* Las gotas no interfieren con los clics */
+  }
+  
+  /* Gotas individuales */
+  .gota {
+    position: absolute;
+    width: 15px;
+    height: 25px;
+    background: radial-gradient(circle, #ffcc33 20%, #e5a900 90%);
+    border-radius: 20%;
+    animation: caer 3s infinite ease-in-out;
+    opacity: 0.8;
+    pointer-events: none; /* Asegura que las gotas no interfieran con el contenido */
+  }
+  
+  /* Posicionamiento de cada gota */
+  .gota:nth-child(1) {
+    left: 10%;
+    animation-delay: 0.2s;
+  }
+  
+  .gota:nth-child(2) {
+    left: 30%;
+    animation-delay: 0.6s;
+  }
+  
+  .gota:nth-child(3) {
+    left: 50%;
+    animation-delay: 1s;
+  }
+  
+  .gota:nth-child(4) {
+    left: 70%;
+    animation-delay: 1.4s;
+  }
+  
+  .gota:nth-child(5) {
+    left: 90%;
+    animation-delay: 1.8s;
+  }
+  
+  /* Animación de caída */
+  @keyframes caer {
+    0% {
+      top: -50px;
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+  
+  /* Foto Section */
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    color: #ffe16b;
+    margin-bottom: 10px;
+  }
+  /* Estilo para la imagen de las instalaciones */
+.hero img {
+  max-width: 39%; /* Ajusta el tamaño según sea necesario */
+  height: auto; /* Mantén la proporción original */
+  float: left; /* Para alinear al lado del texto */
+  margin: 0 150px 0px 20px; /* Espaciado alrededor de la imagen */
+}
+  
+  /* Vista de Contacto */
+  .contacto {
+    max-width: 800px;
+    background: white;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra los textos */
+  }
+  
+  .contacto h2 {
+    font-size: 1.8rem;
+    color: #ffe16b;
+    margin-bottom: 20px;
+  }
+  
+  .contacto p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los íconos con el texto */
+    gap: 10px;
+  }
+  
+  .contacto form {
+    margin-top: 20px;
+  }
+  
+  .contacto input, .contacto button {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .contacto button {
+    background: #ffe16b;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contacto button:hover {
+    background: #ffe16b;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 5px 0;
+    background: #ffe16b;
+    color: white;
+    margin-top: 20px;
+  }
+  .about {
+    margin: 20px auto; /* Margen superior e inferior de 20px, centrado horizontalmente */
+    max-width: 800px; /* Limita el ancho del texto */
+    text-align: justify; /* Justifica el texto */
+}
+
+.about h2 {
+    text-align: center; /* Mantiene el título centrado */
+}
+  /* Título principal animado */
+h1 {
+    font-size: 2.5em;
+    color: #e5a900;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: colorCambio 3s infinite alternate;
+  }
+  
+  /* Animación de cambio de color */
+  @keyframes colorCambio {
+    0% {
+      color: #e5a900;
+    }
+    50% {
+      color: #ffcc33;
+    }
+    100% {
+      color: #e5a900;
+    }
+  }
+  .iconogota{
+    width: 150px;
+    height: 80px;
+  }
+  .iconogirasol{
+    width: 120px;
+    height: 120px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    
+  }
+ 
+/* bullets de las instalaciones*/
+.instalaciones{
+  text-align: justify;
+}
+
+.wpp{
+  width: 50px;
+  margin-left: 48%;
+}
+
+video {
+  position: relative; /* Evita desplazamientos no deseados */
+  left: 50%;          /* Desplaza el elemento a la mitad */
+  transform: translateX(-50%); /* Centra el video */
+  width: 100vw;       /* Ocupa el ancho completo del viewport */
+  height: auto;       /* Mantiene la relación de aspecto */
+  margin: 0;          /* Asegura que no haya margen */
+  padding: 0;         /* Asegura que no haya padding */
+  display: block;     /* Evita el espacio adicional del inline */
+}
+
+
+.videocontainer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
+}
+video {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Sección Equipo y Objetivos */
+.equipo-objetivos {
+  padding: 50px 20px;
+  background-color:#f9f9f9;
+}
+
+.equipo-objetivos .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.equipo-objetivos .contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px; /* Espacio entre equipo y objetivos */
+}
+
+.equipo-objetivos .equipo,
+.equipo-objetivos .objetivos {
+  flex: 1; /* Que ocupen el mismo espacio */
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ffe868;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.equipo-objetivos h3 {
+  color: #000;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.equipo-objetivos p {
+  color: #000;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.contenido{
+  margin-top: 5%;
+}
+
+/*video*/
+.informacion{
+  margin-top: -25px;
+}
+
+/*tarjetas de productos*/
+.info-extra {
+  display: none; /* Oculta por defecto */
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
